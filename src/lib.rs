@@ -115,6 +115,12 @@ cfg_if! {
 
         mod psp;
         pub use psp::*;
+    } else if #[cfg(target_os = "freertos")]{
+        mod fixed_width_ints;
+        pub use fixed_width_ints::*;
+
+        mod freertos;
+        pub use freertos::*;
     } else if #[cfg(target_os = "vxworks")] {
         mod fixed_width_ints;
         pub use fixed_width_ints::*;

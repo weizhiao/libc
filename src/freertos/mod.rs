@@ -141,6 +141,9 @@ extern "C"{
     pub fn close(fd: ::c_int) -> ::c_int;
 }
 
+extern "C"{
+    pub fn printf(format: *const ::c_char, ...) -> ::c_int;
+}
 
 extern "C"{
     pub fn dl_iterate_phdr(
